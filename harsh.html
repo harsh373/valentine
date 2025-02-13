@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DATEPLAN With me!</title>
+    <style>
+        body {
+            text-align: center;
+            background-color: black;
+            color: white;
+            font-family: cursive;
+            background-image: url("images/bg1111.jpg");
+            background-size: cover;
+            background-position-y: 68%;
+        }
+        h1 {
+            color: black;
+        }
+        .input-container {
+            margin-top: 20px;
+        }
+        input, select {
+            padding: 20px;
+            font-size: 26px;
+            margin: 8px;
+            font-family: cursive;
+        }
+        .badge {
+            display: inline-block;
+            width: 400px;
+            height: 300px;
+            color: black;
+            font-size: 18px;
+            font-weight: bold;
+            font-family: cursive;
+            border-radius: 75px;
+            border-width: 10px;
+            padding: 20px;
+            text-align: center;
+            position: relative;
+            border-color: black;
+        }
+        .character-img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            position: absolute;
+            left: 150px;
+            top: 10px;
+        }
+        .mine {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            position: absolute;
+            left: 30px;
+            top: 10px;
+            padding-right: 50px;
+        }
+        .mine img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+        }
+        .name-section {
+            margin-top: 140px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 20px;
+        }
+        .resolution-section {
+            position: absolute;
+            bottom: 10px;
+            left: 20px;
+            right: 20px;
+            background-color: rgb(230, 242, 254);
+            color: rgb(232, 51, 51);
+            font-size: 20px;
+            font-style: italic;
+            font-family: cursive;
+            padding: 10px;
+            border-radius: 10px;
+            min-height: 50px;
+        }
+        .download-btn {
+            margin-top: 20px;
+            padding: 12px 20px;
+            background-color: rgb(18, 18, 18);
+            font-family: cursive;
+            color: rgb(241, 233, 233);
+            font-size: 30px;
+            border: none;
+            cursor: pointer;
+            font-weight: bold;
+            margin-left: 10px;
+            border-radius: 30px;
+        }
+        .generateBadge {
+            padding: 22px 30px;
+            background-color: #d5d8e0df;
+            border-color: red;
+            color: black;
+            font-size: 24px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: 800;
+            margin-top: 50px;
+            margin-left: 15px;
+        }
+        .header {
+            background-color: rgba(255, 255, 255, 0.136);
+            color: black;
+            padding: 10px;
+            font-size: 30px;
+            font-weight: bold;
+            border-radius: 40px;
+            border-width: 20px;
+            border-color: red;
+            margin-top: 70px;
+        }
+        .bgphoto {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0 auto;
+            width: 50%;
+            height: auto;
+            object-fit: cover;
+            transform: scale(0.35);
+            margin-left: 900px;
+            margin-top: 50px;
+        }
+        .para {
+            font-size: 10px;
+            font-family: cursive;
+            color: whitesmoke;
+            margin-top: 10px;
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+        .upload2 {
+            color: black;
+            font-size: 15px;
+            font-weight: 800;
+            margin-left: 15px;
+            margin-top: -40px;
+        }
+        .upload2 h3 {
+            color: rgba(21, 20, 20, 0.756);
+            font-size: 18px;
+            font-weight: 800;
+            margin-bottom: 50px;
+            font-family: cursive;
+        }
+    </style>
+</head>
+<body>
+<div class="header">
+    <h1>Get to date me with a unique plan</h1>
+</div>
+
+<div class="input-container">
+    <input type="text" id="username" placeholder="Enter Your Name">
+    <input type="file" id="photoUpload" accept="image/*" title="Upload Your Photo">
+    <div class="upload2"><h3>Upload Photo</h3></div>
+    <select id="resolution">
+        <option value="">Select Your Date plan with me</option>
+        <option value="resolution1">Cafe + Deep Conversations</option>
+        <option value="resolution2">Movie Night at Home</option>
+        <option value="resolution3">Mini Road Trip</option>
+        <option value="resolution4">Arcade or Gaming Night</option>
+        <option value="resolution5">Amusement Park or Bowling Date</option>
+        <option value="resolution6">Trekking or Nature Walk</option>
+        <option value="resolution7">Cycling Date</option>
+        <option value="resolution8">Stargazing Night</option>
+        <option value="resolution9">Boating or Lakeside Picnic</option>
+        <option value="resolution10">Attend a Local Event or Festival</option>
+        <option value="resolution11">Bookstore or Library Date</option>
+    </select>
+    <button class="generateBadge" onclick="generateBadge()">DatePLAN</button>
+</div>
+
+<div class="badge" id="badge" style="display: none; background: linear-gradient(to right, #ff7e5f, #feb47b);">
+    <img class="character-img" id="characterImg" src="images/photo4.jpg" alt="Character Image">
+    <div class="mine"><img src="images/photo4.jpg" alt="" srcset=""></div>
+    <div class="name-section" id="badgeName"></div>
+    <div class="resolution-section" id="badgeResolution"></div>
+    <div class="para"><p> to the most beautiful person in my life – you! This badge is proof that you’ve stolen my heart and made my world brighter. Keep being amazing, because you’re my favorite kind of magic Excited for the date with uuu.</p></div>
+</div>
+
+<button class="download-btn" id="downloadBtn" style="display: none;" onclick="downloadBadge()">Download plan</button>
+
+<script>
+    function generateBadge() {
+        let name = document.getElementById("username").value;
+        const resolutionSelect = document.getElementById('resolution');
+        const photoUpload = document.getElementById('photoUpload').files[0];
+        const resolution = resolutionSelect.options[resolutionSelect.selectedIndex].text;
+
+        if (name.trim() === "" || resolution.trim() === "" || !photoUpload) {
+            alert("Please enter your name, select a resolution, and upload a photo!");
+            return;
+        }
+
+        let badge = document.getElementById("badge");
+        let badgeName = document.getElementById("badgeName");
+        let badgeResolution = document.getElementById("badgeResolution");
+        let characterImg = document.getElementById("characterImg");
+
+        badgeName.innerHTML = ` ${name} `;
+        badgeResolution.innerHTML = `❤️ ${resolution}`;
+
+        let reader = new FileReader();
+        reader.onload = function (e) {
+            characterImg.src = e.target.result;
+        }
+        reader.readAsDataURL(photoUpload);
+
+        badge.style.display = "block";
+        document.getElementById("downloadBtn").style.display = "block";
+    }
+
+    function downloadBadge() {
+        let canvas = document.createElement('canvas');
+        let ctx = canvas.getContext('2d');
+        let badge = document.getElementById('badge');
+        let characterImg = document.getElementById('characterImg');
+        let badgeName = document.getElementById('badgeName');
+        let badgeResolution = document.getElementById('badgeResolution');
+
+        canvas.width = badge.offsetWidth;
+        canvas.height = badge.offsetHeight;
+
+        ctx.fillStyle = window.getComputedStyle(badge).backgroundColor;
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+        let img = new Image();
+        img.onload = function () {
+            ctx.drawImage(img, characterImg.offsetLeft, characterImg.offsetTop, characterImg.offsetWidth, characterImg.offsetHeight);
+            ctx.font = "bold 20px cursive";
+            ctx.fillStyle = "white";
+            ctx.fillText(badgeName.innerText, 20, 150);
+            ctx.font = "italic 16px Arial";
+            ctx.fillText(badgeResolution.innerText, 20, 280);
+
+            let link = document.createElement('a');
+            link.download = 'badge.png';
+            link.href = canvas.toDataURL();
+            link.click();
+        }
+        img.src = characterImg.src;
+    }
+</script>
+
+</body>
+</html>
