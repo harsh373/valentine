@@ -1,4 +1,4 @@
-this is a website build on HTML and CSS completely . It is a dating profile which is built on for "Why someone will date me " IT is a dating profile having divided into three sections HOME ,ABOUT and VALENTINE FUN>
+this is a website build on HTML and CSS completely . It is a dating profile which is built on for "Why someone will date me " made it as the college event was there  IT is a dating profile having divided into three sections HOME ,ABOUT and VALENTINE FUN>
 Each section has different features.
 The website is welcomed by the introduction or kind of login page where user can put anything.
 The home page is the first page of the website having photos of me and some testimonials.
